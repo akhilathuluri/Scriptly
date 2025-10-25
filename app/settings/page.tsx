@@ -75,7 +75,7 @@ export default function SettingsPage() {
       // Load AI settings
       const savedKey = getAPIKey();
       const autoComplete = getAutoCompleteEnabled();
-      
+
       setApiKey(savedKey || '');
       setAutoCompleteEnabledState(autoComplete);
 
@@ -106,7 +106,7 @@ export default function SettingsPage() {
         setSaving(false);
         return;
       }
-      
+
       saveAPIKey(apiKey);
       setAutoCompleteEnabled(autoCompleteEnabled);
 
@@ -223,9 +223,8 @@ export default function SettingsPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 {/* Status */}
-                <div className={`flex items-center space-x-2 p-3 rounded-lg ${
-                  isConfigured ? 'bg-green-50 dark:bg-green-950' : 'bg-yellow-50 dark:bg-yellow-950'
-                }`}>
+                <div className={`flex items-center space-x-2 p-3 rounded-lg ${isConfigured ? 'bg-green-50 dark:bg-green-950' : 'bg-yellow-50 dark:bg-yellow-950'
+                  }`}>
                   {isConfigured ? (
                     <>
                       <CheckCircle2 className="h-5 w-5 text-green-600 dark:text-green-400" />
@@ -245,53 +244,52 @@ export default function SettingsPage() {
 
                 {/* API Key */}
                 <div className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="api-key">Your Google Gemini API Key</Label>
-                      <div className="flex space-x-2">
-                        <Input
-                          id="api-key"
-                          type={showKey ? 'text' : 'password'}
-                          value={apiKey}
-                          onChange={(e) => setApiKey(e.target.value)}
-                          placeholder="Enter your API key"
-                          className="flex-1"
-                        />
-                        <Button
-                          variant="outline"
-                          onClick={() => setShowKey(!showKey)}
-                        >
-                          {showKey ? 'Hide' : 'Show'}
-                        </Button>
-                      </div>
-                      <p className="text-xs text-muted-foreground">
-                        Your API key is stored locally and never sent to our servers
-                      </p>
-                    </div>
-
-                    {/* Get API Key Instructions */}
-                    <div className="p-4 bg-muted rounded-lg space-y-3">
-                      <div className="flex items-center space-x-2">
-                        <Key className="h-4 w-4 text-primary" />
-                        <span className="text-sm font-medium">How to get your API key:</span>
-                      </div>
-                      <ol className="text-sm text-muted-foreground space-y-2 ml-6 list-decimal">
-                        <li>Visit Google AI Studio</li>
-                        <li>Sign in with your Google account</li>
-                        <li>Click "Get API Key" in the top right</li>
-                        <li>Create a new API key or use an existing one</li>
-                        <li>Copy and paste it above</li>
-                      </ol>
+                  <div className="space-y-2">
+                    <Label htmlFor="api-key">Your Google Gemini API Key</Label>
+                    <div className="flex space-x-2">
+                      <Input
+                        id="api-key"
+                        type={showKey ? 'text' : 'password'}
+                        value={apiKey}
+                        onChange={(e) => setApiKey(e.target.value)}
+                        placeholder="Enter your API key"
+                        className="flex-1"
+                      />
                       <Button
-                        variant="link"
-                        className="p-0 h-auto"
-                        onClick={() => window.open('https://makersuite.google.com/app/apikey', '_blank')}
+                        variant="outline"
+                        onClick={() => setShowKey(!showKey)}
                       >
-                        <ExternalLink className="h-3 w-3 mr-1" />
-                        Open Google AI Studio
+                        {showKey ? 'Hide' : 'Show'}
                       </Button>
                     </div>
+                    <p className="text-xs text-muted-foreground">
+                      Your API key is stored locally and never sent to our servers
+                    </p>
                   </div>
-                )}
+
+                  {/* Get API Key Instructions */}
+                  <div className="p-4 bg-muted rounded-lg space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <Key className="h-4 w-4 text-primary" />
+                      <span className="text-sm font-medium">How to get your API key:</span>
+                    </div>
+                    <ol className="text-sm text-muted-foreground space-y-2 ml-6 list-decimal">
+                      <li>Visit Google AI Studio</li>
+                      <li>Sign in with your Google account</li>
+                      <li>Click "Get API Key" in the top right</li>
+                      <li>Create a new API key or use an existing one</li>
+                      <li>Copy and paste it above</li>
+                    </ol>
+                    <Button
+                      variant="link"
+                      className="p-0 h-auto"
+                      onClick={() => window.open('https://makersuite.google.com/app/apikey', '_blank')}
+                    >
+                      <ExternalLink className="h-3 w-3 mr-1" />
+                      Open Google AI Studio
+                    </Button>
+                  </div>
+                </div>
 
                 {/* Auto-Complete Option */}
                 <div className="flex items-center justify-between p-4 border rounded-lg bg-gradient-to-r from-primary/5 to-purple-600/5">
@@ -446,9 +444,8 @@ export default function SettingsPage() {
                   <div className="grid grid-cols-3 gap-4">
                     <button
                       onClick={() => setTheme('light')}
-                      className={`p-4 border-2 rounded-lg flex flex-col items-center space-y-2 transition-all ${
-                        theme === 'light' ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'
-                      }`}
+                      className={`p-4 border-2 rounded-lg flex flex-col items-center space-y-2 transition-all ${theme === 'light' ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'
+                        }`}
                     >
                       <Sun className="h-6 w-6" />
                       <span className="text-sm font-medium">Light</span>
@@ -456,9 +453,8 @@ export default function SettingsPage() {
 
                     <button
                       onClick={() => setTheme('dark')}
-                      className={`p-4 border-2 rounded-lg flex flex-col items-center space-y-2 transition-all ${
-                        theme === 'dark' ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'
-                      }`}
+                      className={`p-4 border-2 rounded-lg flex flex-col items-center space-y-2 transition-all ${theme === 'dark' ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'
+                        }`}
                     >
                       <Moon className="h-6 w-6" />
                       <span className="text-sm font-medium">Dark</span>
@@ -466,9 +462,8 @@ export default function SettingsPage() {
 
                     <button
                       onClick={() => setTheme('system')}
-                      className={`p-4 border-2 rounded-lg flex flex-col items-center space-y-2 transition-all ${
-                        theme === 'system' ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'
-                      }`}
+                      className={`p-4 border-2 rounded-lg flex flex-col items-center space-y-2 transition-all ${theme === 'system' ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'
+                        }`}
                     >
                       <Monitor className="h-6 w-6" />
                       <span className="text-sm font-medium">System</span>
