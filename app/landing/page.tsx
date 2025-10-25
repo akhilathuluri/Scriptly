@@ -6,6 +6,14 @@ import { Button } from '@/components/ui/button';
 import { TypewriterDemo } from '@/components/typewriter-demo';
 import { AuthButtons } from '@/components/auth/auth-buttons';
 import { AuthCheck } from '@/components/auth/auth-check';
+import { StructuredData } from '@/components/structured-data';
+import {
+  organizationSchema,
+  softwareApplicationSchema,
+  webApplicationSchema,
+  faqSchema,
+  howToSchema,
+} from '@/app/structured-data';
 import {
   FileText,
   Sparkles,
@@ -106,8 +114,57 @@ export default function LandingPage() {
     { icon: Rocket, value: '99.9%', label: 'Uptime' },
   ];
 
+  // FAQ structured data
+  const faqData = faqSchema([
+    {
+      question: 'Is this online markdown editor really free?',
+      answer: 'Yes! Scriptly is 100% free and open source. There are no hidden costs, premium tiers, or subscriptions. You get all features for free, forever.',
+    },
+    {
+      question: 'Do I need to install anything?',
+      answer: 'No installation required! Our markdown editor works entirely in your web browser. Just sign up and start writing immediately.',
+    },
+    {
+      question: 'Is my data secure?',
+      answer: 'Absolutely. Your documents are stored securely in your own Supabase instance with industry-standard encryption. We never access your private data.',
+    },
+    {
+      question: 'Can I use it offline?',
+      answer: "While Scriptly is primarily an online markdown editor, we're working on offline support. Your documents are cached locally for quick access.",
+    },
+    {
+      question: 'What markdown features are supported?',
+      answer: 'We support all standard markdown syntax plus advanced features like tables, task lists, footnotes, Mermaid diagrams, LaTeX math, and code syntax highlighting.',
+    },
+    {
+      question: 'Can I export my documents?',
+      answer: 'Yes! You can export your markdown documents as PDF, HTML, or download the raw .md files. Your content is never locked in - you own your data.',
+    },
+  ]);
+
+  // How-to structured data
+  const howToData = howToSchema([
+    { name: 'Sign Up Free', text: 'Create your free account in seconds with email or social login' },
+    { name: 'Start Writing', text: 'Open the editor and start writing in markdown' },
+    { name: 'See Live Preview', text: 'Watch your content render in real-time as you type' },
+    { name: 'Use AI Features', text: 'Enhance your writing with AI assistance and auto-complete' },
+    { name: 'Organize Documents', text: 'Create folders and organize your markdown files' },
+    { name: 'Export & Share', text: 'Export to PDF, HTML, or share via email' },
+  ]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+      {/* Structured Data for Rich Results */}
+      <StructuredData
+        data={[
+          organizationSchema,
+          softwareApplicationSchema,
+          webApplicationSchema,
+          faqData,
+          howToData,
+        ]}
+      />
+
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
