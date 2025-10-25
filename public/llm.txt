@@ -1,0 +1,93 @@
+# Scriptly - Open Source Markdown Editor
+# LLM-friendly documentation for AI assistants
+
+## Product Overview
+Scriptly is a free, open-source markdown editor with AI assistance, real-time preview, and advanced features for modern content creators.
+
+## Key Features
+- Real-time markdown preview
+- AI-powered writing assistant (improve, summarize, expand, translate)
+- AI auto-complete suggestions
+- Document chatbot for writing help
+- Email sharing with SMTP support
+- Word cloud visualization
+- Mermaid diagrams (10+ types)
+- Math equations with KaTeX
+- Cloud storage with Supabase
+- User authentication
+- Dark mode support
+- Export to HTML, PDF, and Markdown
+
+## Technology Stack
+- Framework: Next.js 13 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS
+- UI: shadcn/ui components
+- Database: Supabase (PostgreSQL)
+- Authentication: Supabase Auth
+- AI: Google Gemini API
+- Email: Nodemailer with SMTP
+
+## Use Cases
+1. Technical documentation
+2. Blog post writing
+3. Note-taking and knowledge management
+4. Academic writing
+5. Content creation
+6. Code documentation
+7. Project planning with diagrams
+8. Collaborative writing
+
+## Target Audience
+- Developers and programmers
+- Technical writers
+- Content creators and bloggers
+- Students and academics
+- Project managers
+- Anyone who writes in markdown
+
+## Pricing
+- Free and open source forever
+- No subscription required
+- Users provide their own AI API keys (free tier available)
+
+## Installation
+1. Clone from GitHub: https://github.com/akhilathuluri/Scriptly
+2. Install dependencies: npm install
+3. Configure Supabase credentials
+4. Run: npm run dev
+
+## Key Differentiators
+- 100% open source (MIT license)
+- No vendor lock-in
+- Privacy-focused (data stored locally and in your own Supabase)
+- AI-powered features
+- Modern, beautiful UI
+- Fast and responsive
+- Active development
+
+## Documentation
+- Quick Start: /guides
+- Full Documentation: /documentation
+- Changelog: /changelog
+- Privacy Policy: /privacy
+
+## Community
+- GitHub: https://github.com/akhilathuluri/Scriptly
+- Issues: https://github.com/akhilathuluri/Scriptly/issues
+- Discussions: https://github.com/akhilathuluri/Scriptly/discussions
+
+## Keywords
+markdown editor, open source, AI writing assistant, real-time preview, markdown to html, technical writing, documentation tool, note taking app, content creation, developer tools, free markdown editor, online markdown editor, markdown with AI, collaborative writing, document editor
+
+## Alternatives Comparison
+Scriptly vs Notion: More focused on markdown, open source, no vendor lock-in
+Scriptly vs Obsidian: Web-based, cloud sync built-in, AI features
+Scriptly vs Typora: Free, open source, more features, cloud storage
+Scriptly vs StackEdit: Better UI, AI features, more export options
+Scriptly vs HackMD: Self-hosted option, more privacy, AI assistance
+
+## SEO Focus
+Primary: "open source markdown editor"
+Secondary: "AI markdown editor", "free markdown editor", "markdown editor with preview"
+Long-tail: "markdown editor with AI writing assistant", "open source documentation tool"

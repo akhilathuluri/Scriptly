@@ -1,0 +1,35 @@
+# Robots.txt for Scriptly - Open Source Markdown Editor
+# https://scriptly-md.vercel.app/
+
+User-agent: *
+Allow: /
+Allow: /landing
+Allow: /changelog
+Allow: /documentation
+Allow: /guides
+Allow: /privacy
+
+# Disallow private pages
+Disallow: /editor
+Disallow: /profile
+Disallow: /settings
+Disallow: /api/
+
+# Disallow authentication pages
+Disallow: /auth/
+
+# Allow search engines to crawl public assets
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# Sitemap location
+Sitemap: https://scriptly-md.vercel.app/sitemap.xml
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 1
